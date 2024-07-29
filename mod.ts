@@ -100,6 +100,7 @@ export async function bumpWorkspaces(
     root = ".",
   }: BumpWorkspaceOptions = {},
 ) {
+  $.setPrintCommand(true);
   const now = new Date();
   start ??= await $`git describe --tags --abbrev=0`.text();
   base ??= await $`git branch --show-current`.text();
