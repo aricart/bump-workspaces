@@ -1,6 +1,6 @@
 {
   "lock": false,
-  "name": "@deno/bump-workspaces",
+  "name": "@aricart/bump-workspaces",
   "exports": {
     ".": "./mod.ts",
     "./cli": "./cli.ts"

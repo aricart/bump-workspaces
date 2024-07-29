@@ -2,6 +2,7 @@
 
 import { parseArgs } from "@std/cli/parse-args";
 import { bumpWorkspaces } from "./mod.ts";
+import { $ } from "@david/dax";
 
 /**
  * The CLI entrypoint of the package. You can directly perform the version bump behavior from CLI:
@@ -21,7 +22,11 @@ import { bumpWorkspaces } from "./mod.ts";
 
 if (import.meta.main) {
   const args = parseArgs(Deno.args, {
-    boolean: ["dry-run"],
+    boolean: ["dry-run", "debug"],
   });
+
+  if(args.debug) {
+    $.setPrintCommand(true)
+  }
   await bumpWorkspaces({ dryRun: args["dry-run"] });
 }

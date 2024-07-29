@@ -1,4 +1,10 @@
-# @deno/bump-workspaces
+# @aricart/bump-workspaces
+
+> [! CAUTION]
+> This is a clone of @deno/bump-workspaces with some changes for debugging.
+> Please use the @deno/bump-workspaces.
+
+
 
 > A tool for upgrading Deno workspace packages using conventional commits
 
