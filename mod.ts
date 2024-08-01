@@ -102,7 +102,7 @@ export async function bumpWorkspaces(
 ) {
   $.setPrintCommand(true);
   const now = new Date();
-  start ??= await $`git describe --tags --abbrev=0`.text();
+  start ??= await $`git describe --tags --abbrev=0 --always`.text();
   base ??= await $`git branch --show-current`.text();
   if (!base) {
     console.error("The current branch is not found.");
